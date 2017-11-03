@@ -5,7 +5,6 @@ import java.util.*;
 public class permute {
 	public static void main(String[] args) {
 		List<Integer> l1 = new ArrayList<>();
-		//List<List<Integer>> result = new ArrayList<>();
 		List<int[]> result = new ArrayList<>();
 		l1.add(1); l1.add(2); l1.add(3);
 		generate(l1, 0, l1.size()-1, result);
@@ -37,3 +36,31 @@ public class permute {
 		return l1;
 	}
 }
+
+
+/* Leetcode 
+public List<List<Integer>> permute(int[] nums) {
+    List<List<Integer>> result = new ArrayList<>();
+    getPermulations(nums, 0, nums.length-1, result);
+    return result;
+}
+public void getPermulations(int[] nums, int l, int r, List<List<Integer>>result) {
+    if(l == r) {
+        List<Integer> r1 = new ArrayList<>();
+        for(int i = 0; i <= r; i++)
+            r1.add(nums[i]);
+        result.add(r1);
+    } else {
+        for(int i = l; i <= r; i++) {
+            swap(nums, l, i);
+            getPermulations(nums, l+1, r, result);
+            swap(nums, l, i);
+        }
+    }
+}
+
+public void swap(int[] nums, int l, int i) {
+    int temp = nums[l];
+    nums[l] = nums[i];
+    nums[i] = temp;
+}*/

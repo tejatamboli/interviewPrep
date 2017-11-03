@@ -15,7 +15,7 @@ public class leastCommonAncestor {
 	    root.right.left = new BinaryTree(6);
 	    root.right.right = new BinaryTree(7);
 	    root.right.left.right = new BinaryTree(8);
-		System.out.println("dist is[4,5]: " +  getDist(root, 4, 5));
+
 		d1 = -1; d2 = -1; dist = 0;
 		System.out.println("dist is[4,6]: " +  getDist(root, 4, 6));
 		d1 = -1; d2 = -1; dist = 0;
@@ -73,5 +73,20 @@ public class leastCommonAncestor {
 		int left = findLevel(root.left, data, level+1);
 		return (left != -1) ? left : findLevel(root.right,data,level+1);			
 	}
+	
+	
+	/* Leetcode only LCA 
+	public BinaryTree lowestCommonAncestor(BinaryTree root, BinaryTree p, BinaryTree q) {
+        if(root == null || root == p || root == q)
+            return root;
+      
+        BinaryTree left = lowestCommonAncestor(root.left, p, q);
+        BinaryTree right = lowestCommonAncestor(root.right, p, q);
+        
+        if(left != null && right!= null) 
+            return root;
+        
+        return (left != null ? left : right);               
+    } */
 }
 

@@ -3,7 +3,8 @@ package Collection;
 public class isNumber {
 	
 	public static void main(String[] args) {
-		String num = "-3.0123";
+		//String num = "-3.0123";
+		String num = ".";
 		System.out.println("num: " + num + " is number: " + isNumber(num));
 	}
 	
@@ -30,5 +31,54 @@ public class isNumber {
 				return false;
 		}
 		return true;
-	}
+	}	
 }
+
+
+/* Leetcode solution */
+/*
+class Solution {
+    public boolean isNumber(String s) {
+        s = s.trim();
+        if(s == null || s.length() == 0)
+            return false;
+        
+        if(s.equals("."))
+            return false;
+        
+        boolean sign = false;
+        boolean decimal = false;
+        boolean number = false;
+        boolean eseen = false;
+        boolean numberAfterE = false;
+        boolean signPositive = false;
+        
+        for(int i = 0; i < s.length(); i++) {
+            if((s.charAt(i) == '-') || (s.charAt(i) == '+')) {
+                if(eseen && ((number && !numberAfterE) || decimal)) {
+                        sign = true;
+                }
+                else if(number || eseen || numberAfterE || decimal) {
+                    return false;
+                } 
+                sign = true;
+            }
+            else if(s.charAt(i) == '.') {
+                if(decimal || eseen)
+                    return false;
+                decimal = true;
+            } else if(s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+                number = true;
+                numberAfterE = true;
+            } else if(s.charAt(i) == 'e') {
+                if(eseen || !number || i == s.length()-1)
+                    return false;
+                eseen = true;
+                numberAfterE = false;
+            } else
+                return false;
+        }
+        return number && numberAfterE;       
+    }
+}
+*/

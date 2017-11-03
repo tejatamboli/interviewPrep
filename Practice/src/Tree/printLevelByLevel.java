@@ -26,6 +26,32 @@ public class printLevelByLevel {
 		}
 	}
 	
+	//leetcode
+	public static List<List<Integer>> levelOrder(BinaryTree root) {
+        List<List<Integer>> l = new LinkedList<>();
+        if(root == null)
+            return l;
+        
+        Queue<BinaryTree> q = new LinkedList<BinaryTree>();
+        q.add(root);
+        while(true) {
+            int nodeCnt = q.size();
+            if(nodeCnt == 0)
+                break;
+            l.add(new LinkedList<Integer>());
+            while(nodeCnt > 0) {
+                BinaryTree p = q.poll();
+                l.get(l.size()-1).add(p.data);
+                if(p.left != null)
+                    q.add(p.left);
+                if(p.right != null)
+                    q.add(p.right);
+                nodeCnt--;
+            }
+        }
+        return l;
+    }
+	
 	public static void main(String args[]) 
     {
         /* creating a binary tree and entering 
@@ -39,5 +65,6 @@ public class printLevelByLevel {
  
         System.out.println("Level order traversal of binary tree is - ");
         printLevel(root);
+        System.out.println("Accepted Sol: " + levelOrder(root));
     }
 }

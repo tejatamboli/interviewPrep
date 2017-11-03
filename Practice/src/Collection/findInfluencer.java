@@ -46,3 +46,27 @@ public class findInfluencer {
 		return a;
 	}
 }
+
+/* Leetcode
+ public class Solution extends Relation {
+    public int findCelebrity(int n) {
+        int a = 0;
+        int b = n-1;
+        while(a < b) {
+            if(knows(a,b))
+                a++;
+            else
+                b--;
+        }
+        int i = 0;
+        while(i < n) {
+            if((i == a) || (knows(i,a) && !knows(a,i))) {
+                i++;
+                continue;
+            } else
+                return -1;
+        }
+        return a;
+    }
+} 
+*/

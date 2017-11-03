@@ -24,3 +24,23 @@ public class nestedList_reverse_depth_weighted_sum {
 		}*/
 
 }
+/* Leetcode
+ * https://leetcode.com/problems/nested-list-weight-sum/description/
+ *
+
+public int depthSum(List<NestedInteger> nestedList) {
+    return evaluate(nestedList, 1);   
+}
+
+public int evaluate(List<NestedInteger>nestedList, int level) {
+    int sum = 0;
+    for(int i = 0; i < nestedList.size(); i++) {
+        if(nestedList.get(i).isInteger()) {
+            sum += level * nestedList.get(i).getInteger();
+        } else
+            sum += evaluate(nestedList.get(i).getList(), level+1);
+    }
+    return sum;
+} 
+
+*/
