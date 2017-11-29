@@ -15,7 +15,7 @@ public class rotatedBinarySearch {
 		if (pivot == -1)
 			index = binarySearch(arr, 0, arr.length-1, key);
 		else {
-			if (arr[0] <= key)
+			if (arr[0] <= key) //dont understand this condition
 				index = binarySearch(arr, 0, pivot-1, key);
 			else
 				index = binarySearch(arr, pivot+1, arr.length-1, key);

@@ -1,5 +1,7 @@
 package Graph;
 
+import java.util.Arrays;
+
 public class primSpanningTree {
 	
 	public static void main(String[] args) {
@@ -39,10 +41,7 @@ public class primSpanningTree {
 		int key[] = new int[V];
 		boolean mst[] = new boolean[V];
 		
-		for(int i = 0; i < V; i++) {
-			mst[i] = false;
-			key[i] = Integer.MAX_VALUE; 
-		}
+		Arrays.fill(key, Integer.MAX_VALUE);
 		
 		key[0] = 0;
 		parent[0] = -1;

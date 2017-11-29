@@ -1,5 +1,7 @@
 package Collection;
 
+//get the distance between two words from the string s
+
 public class findWordDistance {
 	public static void main(String[] args) {
 		//String s = "hello how are you";
@@ -19,7 +21,7 @@ public class findWordDistance {
 		String[] tokens = s.split("[ \t]+");
 		int i = 0;
 		for(String t: tokens) {
-			System.out.println("" + t + t.length());
+			System.out.println("" + t + " : " + t.length());
 			if(t.equals(a))
 				aIndex = i;
 			if(t.equals(b))

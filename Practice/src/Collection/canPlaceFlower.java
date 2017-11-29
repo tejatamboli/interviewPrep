@@ -1,5 +1,7 @@
 package Collection;
 
+//you can plant flower [set 1] only if they are not adjacent.
+
 public class canPlaceFlower {
 	public static void main(String[] args) {
 		int flowerBed[] = {1,0,0,0,0,0,1,0,0};

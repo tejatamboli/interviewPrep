@@ -29,7 +29,7 @@ public class KthHighestElementFromArray {
 	public static int partition(int[] arr, int l, int r) {
 		int pivot = arr[r];
 		int i = l;
-		for(int j = l; j <= r-1; j++) {
+		for(int j = l; j < r; j++) {
 			if(arr[j] <= pivot) {
 				swap(arr, j, i);
 				i++;

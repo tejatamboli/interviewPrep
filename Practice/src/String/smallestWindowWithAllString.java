@@ -1,5 +1,9 @@
 package String;
 
+/*leetcode: https://leetcode.com/problems/minimum-window-substring/description/
+ * 
+ */
+
 public class smallestWindowWithAllString {
 	public static void main(String[] args) {
 		String str = "this is a test string";

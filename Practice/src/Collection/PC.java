@@ -2,6 +2,9 @@ package Collection;
 
 import java.util.*;
 
+/* Producer consumer using shared buffer to store data
+ * 
+ */
 
 	public class PC {
 		

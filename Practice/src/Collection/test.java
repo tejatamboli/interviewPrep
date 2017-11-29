@@ -2,6 +2,7 @@ package Collection;
 
 public class test {
 	
+	//returns true if numbers are in descending order
 	public static boolean checkForDescending(int[] arr) {
 		for(int i = 0; i < arr.length - 1; i++)
 			if(arr[i] < arr[i+1])
@@ -35,6 +36,7 @@ public class test {
         return -1;
     }
 	
+	//binary search for descending order
 	public static int binarySearch(int[] arr, int target, int left, int right) {
         while(left <= right) {
             int m = (left + right) / 2;

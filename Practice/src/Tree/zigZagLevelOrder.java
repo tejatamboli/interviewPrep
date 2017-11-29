@@ -49,6 +49,8 @@ public class zigZagLevelOrder {
                 printGivenLevel(root.right, level-1, zigzag, l1);
                 printGivenLevel(root.left, level-1, zigzag, l1);   
             }
-        }        
+        }   
+        //can be done using Deque<Integer>q = new LinkedList<>();
+        
     }
 }

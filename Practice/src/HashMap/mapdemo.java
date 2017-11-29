@@ -19,8 +19,7 @@ public class mapdemo {
 	      System.out.println("containsVal : " + m1.containsValue("14"));
 	      
 	      System.out.println("Printing Keys");
-	      Set kset = m1.keySet();
-	      Iterator it = kset.iterator();
+	      Iterator it = m1.keySet().iterator();
 	      while(it.hasNext()) {
 	    	  	System.out.println("Key : " + it.next());	
 	      }

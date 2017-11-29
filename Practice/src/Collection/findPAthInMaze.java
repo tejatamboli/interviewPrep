@@ -7,7 +7,7 @@ package Collection;
 public class findPAthInMaze {
 	public static void main(String[] args) {
 		int[][] mat = {{1,2,3,8},{4,5,6,7}};
-		printPaths(mat, 2, 4);
+		printPaths(mat, mat.length, mat[0].length);
 	}
 	
 	public static void printPaths(int[][] mat, int m, int n) {
@@ -39,3 +39,23 @@ public class findPAthInMaze {
 		getPaths(mat, m, n, i, j+1, path, p_i+1);		
 	}
 }
+
+/*
+ *  Leetcode: https://leetcode.com/problems/unique-paths/discuss/
+ * 
+ class Solution {
+    
+    public int uniquePaths(int m, int n) {
+        int[][] grid = new int[m][n];
+        for(int i = 0; i < n; i++)
+            grid[0][i] = 1;
+        for(int i = 0; i < m; i++)
+            grid[i][0] = 1;
+        for(int i = 1; i < m; i++) {
+            for(int j = 1; j < n; j++)
+                grid[i][j] = grid[i-1][j] + grid[i][j-1];
+        }
+        return grid[m-1][n-1];
+    }
+}
+*/

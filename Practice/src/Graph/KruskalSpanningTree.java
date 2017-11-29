@@ -2,6 +2,12 @@ package Graph;
 
 import java.util.Arrays;
 
+/* Greedy Algorithm
+ * sort the edges based on the weight
+ * add the edge if it is not forming cycle
+ * total edges in result should be v-1
+ */
+
 public class KruskalSpanningTree {
 	
 	public static void main(String[] args) {

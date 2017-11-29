@@ -1,5 +1,8 @@
 package Collection;
 
+/* 
+ * major number is present if num is present > a.length/2
+ */
 public class findMajorNumber {
 	public static void main(String[] args) {
 		int[] a = {3, 3, 4, 2, 4, 4, 2, 4, 4};

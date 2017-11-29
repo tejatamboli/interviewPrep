@@ -1,5 +1,7 @@
 package Collection;
 
+//check if the string is a valid number
+
 public class isNumber {
 	
 	public static void main(String[] args) {
@@ -54,6 +56,7 @@ class Solution {
         boolean signPositive = false;
         
         for(int i = 0; i < s.length(); i++) {
+        //sign can come at the start or immediately after e
             if((s.charAt(i) == '-') || (s.charAt(i) == '+')) {
                 if(eseen && ((number && !numberAfterE) || decimal)) {
                         sign = true;
@@ -70,7 +73,7 @@ class Solution {
             } else if(s.charAt(i) >= '0' && s.charAt(i) <= '9') {
                 number = true;
                 numberAfterE = true;
-            } else if(s.charAt(i) == 'e') {
+            } else if(s.charAt(i) == 'e') {    //there should be some number after e and before e
                 if(eseen || !number || i == s.length()-1)
                     return false;
                 eseen = true;

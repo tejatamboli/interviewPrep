@@ -38,6 +38,7 @@ public class orderedBinaryTreeTraverse {
         while (it.hasNext()) {
         	    int d = q.poll();
             System.out.println(" " + d);
+            
         }
 	}
 }

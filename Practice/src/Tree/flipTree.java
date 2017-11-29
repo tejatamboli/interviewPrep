@@ -1,5 +1,7 @@
 package Tree;
 
+/* mirror of the tree */
+
 public class flipTree {
 	public static void main(String[] args) {
 		BinaryTree root = new BinaryTree(1);

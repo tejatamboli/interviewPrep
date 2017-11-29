@@ -1,5 +1,7 @@
 package Collection;
 
+//check if the other string is rotated
+
 public class isRotation {
 	public static void main(String[] args) {
 		String s1 = "abc";

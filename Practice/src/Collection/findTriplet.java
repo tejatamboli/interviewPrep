@@ -2,6 +2,11 @@ package Collection;
 
 import java.util.Arrays;
 
+/*
+ * find triplet with following condition
+ * (a+b > c) && (b+c > a) && (c+a > b)
+ */
+
 public class findTriplet {
 	public static void main(String[] args) {
 		int arr[] = {10, 5, 3, 4, 7, 1};

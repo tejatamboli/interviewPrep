@@ -2,6 +2,8 @@ package Collection;
 
 import java.util.*;
 
+//from all the input strings find common characters
+
 public class findCommonChars {
 	public static void main(String[] args) {
 		List<String> l1 = new ArrayList<String>();
@@ -22,18 +24,13 @@ public class findCommonChars {
 			for(int i = 0; i < l1.get(j).length(); i++) {
 				char c = l1.get(j).charAt(i);
 				if (m1.containsKey(c)) {
-					//System.out.println("c is present: " + c);
-					if (m1.get(c).containsKey(j)) {
-						//System.out.println("c is present and j : " + c + " " + j);
+					if (m1.get(c).containsKey(j)) {	
 						int val = m1.get(c).get(j);
 						m1.get(c).put(j, val+1);
-						//System.out.println("Inserted c j val " + c + " " + j + " " + val);
 					} else {
-						//System.out.println("C is present but not j" + c + " " + j);
 						m1.get(c).put(j, 1);
 					}
 				} else {
-					//System.out.println("C is not present in the map " + c);
 					HashMap<Integer, Integer> a1 = new HashMap<Integer, Integer>();
 					a1.put(j, 1);
 					m1.put(c, a1);
@@ -45,10 +42,10 @@ public class findCommonChars {
 			Map.Entry<Integer, Map<Integer, Integer>>pair = (Map.Entry)it.next();
 			if (pair.getValue().size() == l1.size()) {
 				System.out.print(pair.getKey());
-				int cnt = 0;
+				int cnt = Integer.MAX_VALUE;
 				for(int i = 0; i < pair.getValue().size() - 1; i++) {
 					int min = Math.min(pair.getValue().get(i), pair.getValue().get(i+1));
-					if (min > cnt)
+					if (min < cnt)
 						cnt = min;
 				}
 				System.out.println(" Repeated : " + cnt);
@@ -64,6 +61,7 @@ public class findCommonChars {
 			Set<Character> cMap = new HashSet<>();
 			for(int j = 0; j < l1.get(i).length(); j++) {
 				if(!cMap.contains(l1.get(i).charAt(j))) {
+					System.out.println("adding to set: " + l1.get(i).charAt(j));
 					cMap.add(l1.get(i).charAt(j));
 					chars[l1.get(i).charAt(j) - 'a']++;
 				}

@@ -25,5 +25,22 @@ public class isBST {
 				isBSTUtil(root.right, max, root.data+1));
 					
 	}
-
 }
+
+/* Leetcode: https://leetcode.com/problems/validate-binary-search-tree/discuss/
+ 
+ 
+ class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);    
+    }
+    
+    public boolean isValid(TreeNode root, long min, long max) {
+        if(root == null)
+            return true;
+        else if(root.val <= min || root.val >= max)
+            return false;
+        return (isValid(root.left, min, root.val) && isValid(root.right, root.val, max));
+    }
+}
+*/

@@ -1,5 +1,7 @@
 package Collection;
 
+//from sequence find the number which is repeated and number which is missing from the sequence
+
 public class findRepeatMissingNo {
 	public static void main(String[] args) {
 		int[] a = {7,3,4,5,5,6,2};

@@ -10,6 +10,7 @@ public class bipertite {
 	
 	public static boolean isBipertite(int[][]a, int src, int V) {
 		int[] colorArr = new int[V];
+		Arrays.fill(colorArr, -1);
 		Queue<Integer>q = new LinkedList<Integer>();
 		colorArr[src] = 1;
 		q.add(src); 
@@ -17,6 +18,7 @@ public class bipertite {
 			int u = q.remove();
 			if(a[u][u] == 1)
 				return false;
+			
 			for(int v = 0; v < V; v++) {
 				if((a[u][v] == 1) && (colorArr[v] == -1)) {
 					colorArr[v] = 1 - colorArr[u];

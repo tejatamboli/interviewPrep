@@ -1,5 +1,7 @@
 package Collection;
 
+//convert numbers in different bases to decimal number
+
 public class baseToDecimal {
 	public static void main(String[] args) {
 		String s = "11A";
@@ -14,17 +16,18 @@ public class baseToDecimal {
 			return (int)(c-'A'+10);
 	}
 	
-	public static int getNumber(String s, int b) {
+	public static int getNumber(String s, int base) {
 		int power = 1;
 		int num = 0;
 		char[] arr = s.toCharArray(); 
 		
 		for(int i = s.length()-1; i >= 0; i--) {
-			if (getVal(arr[i]) >= b) {
+			int val = getVal(arr[i]);
+			if (val >= base) {
 				return -1;
 			}
-			num = num + getVal(arr[i]) * power;
-			power = b * power;
+			num = num + val * power;
+			power = base * power;
 		}
 		return num;
 	}

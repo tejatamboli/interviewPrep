@@ -2,11 +2,14 @@ package Collection;
 
 import java.util.*;
 
+//sum is the addition of consecutive odd numbers
+//check if the number is perfect square
+
 public class perfectSquare {
 	
 	public static void main(String[] args) {
-		int num = 2147483647;
-		//int num = 16;
+		//int num = 2147483647;
+		int num = 16;
 		System.out.println("isSquare " + num + " : " + isSquare(num));
 	}
 	

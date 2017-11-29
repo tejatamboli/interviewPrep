@@ -1,5 +1,6 @@
 package Collection;
 
+//Given list of characters in sorted order and a character. Find the next greatest element in O(log n)
 public class findNextChar {
 	public static void main(String[] args) {
 		char[] l1 = {'c','f','j','p','v'};

@@ -1,5 +1,13 @@
 package Graph;
 
+/* Count the number of connected components
+ * Connected components are 
+ * 1 1 1 <- starts from this one and then goes in the left side
+ * 1 1 1
+ * 1 1 1
+ */
+
+
 public class connectedComponent {
 	
 	static int[] rComb = {-1, -1, -1, 0, 1, 1, 1, 0};

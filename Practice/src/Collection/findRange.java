@@ -2,6 +2,8 @@ package Collection;
 
 import java.util.*;
 
+//find the first number that is greater than or equal to target.
+
 public class findRange {
 	
 		public static void main(String[] args) {

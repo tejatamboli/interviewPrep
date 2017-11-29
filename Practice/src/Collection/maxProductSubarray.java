@@ -1,5 +1,7 @@
 package Collection;
 
+//maximum product subarray
+
 public class maxProductSubarray {
 	
 	public static int maxProduct(int[] nums) {

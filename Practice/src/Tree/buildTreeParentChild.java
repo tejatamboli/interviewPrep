@@ -2,6 +2,10 @@ package Tree;
 
 import java.util.*;
 
+/* Build tree from the list which has parent, child and isleft value 
+ * 
+ */
+
 public class buildTreeParentChild {
 	public static void main(String[] args) {
 		List<Relation> l1 = new ArrayList<>();

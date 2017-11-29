@@ -46,13 +46,13 @@ public class cntMergedInterval {
 		while(i < l1.size()) {
 			int j = i+1;
 			int e = l1.get(i).end;
-			while((j < l1.size()) && (e >= l1.get(j).start)) {
+			while((j < l1.size()) && (l1.get(j).start) <= e) {
 				e = Math.max(e, l1.get(j).end);
 				j++;
 			}
 			range += e - l1.get(s).start;
 			System.out.println("e: " + e + " start: " + l1.get(s).start);
-			i = j; s = j;
+			i = s = j;
 		}
 		return range;
 	}

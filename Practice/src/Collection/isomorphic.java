@@ -2,6 +2,9 @@ package Collection;
 
 import java.util.Arrays;
 
+//two strings are isomorphic if there is exact one to one mapping in the character. Using which you can convert one 
+//string into the another
+
 public class isomorphic {
 	public static void main(String[] args) {
 		System.out.println(isIsomorphic("aab", "xxy"));
@@ -16,8 +19,8 @@ public class isomorphic {
 		
 		for(int i = 0; i < a.length(); i++) {
 			if(map[(int)a.charAt(i)] == -1) { //mapping does not exist
-				if(marked[(int)b.charAt(i)] == true)
-					return false;
+				if(marked[(int)b.charAt(i)] == true) //if other character is already mapped marking should be done
+					return false;					//for characters from other string and map stores for current string
 				marked[(int)b.charAt(i)] = true;
 				map[(int)a.charAt(i)] = b.charAt(i); 
 			} else if(map[(int)a.charAt(i)] != b.charAt(i))

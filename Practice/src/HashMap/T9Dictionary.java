@@ -3,6 +3,7 @@ package HashMap;
 import java.util.Arrays;
 
 /* Design data structure to implement T9 dictionary -> Trie */
+/*It is based on phone the way you press numbers it should print all possible words*/
 
 public class T9Dictionary {
 	
@@ -15,14 +16,13 @@ public class T9Dictionary {
 	}
 	
 	public static void printWords(int number[], int n) {
-		char[] result = new char[n+1];
-		result[n] = '\0';
+		char[] result = new char[n];
 		printWordsUtil(result, 0, number, n);
 	}
 	
 	public static void printWordsUtil(char result[], int c_i, int number[], int n) {
 		if(c_i == n) {
-			System.out.println("Str: " + Arrays.toString(result));
+			System.out.println("Str: " + String.valueOf(result));
 			return;
 		}
 		

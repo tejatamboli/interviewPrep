@@ -33,13 +33,10 @@ public class leastCommonAncestor {
 		
 		if(d1 != -1 && d2 != -1)
 			return dist;
-		if(d1!= -1)  {
-			level = 0;
-			return findLevel(ca, m2, level);
-		} if(d2 != -1) {
-			level = 0;
-			return findLevel(ca, m1, level);
-		}
+		if(d1!= -1)  
+			return findLevel(ca, m2, 0);
+		if(d2 != -1) 
+			return findLevel(ca, m1, 0);
 		return -1;
 	}	
 	

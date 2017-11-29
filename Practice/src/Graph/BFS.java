@@ -32,17 +32,15 @@ public class BFS {
 	
 	public static void traverse_breadthwise(int src) {
 		boolean visited[] = new boolean[V];
-		for(int i = 0; i < V; i++)
-			visited[i] = false;
 		
-		LinkedList<Integer> q = new LinkedList<>();
+		List<Integer> q = new LinkedList<>();
 		q.add(src);
 		visited[src] = true;
 		while(!q.isEmpty()) {
-			int s = q.remove();
+			int s = q.remove(0);
 			System.out.println(s + " ");
 			
-			Iterator<Integer> i = adj[s].listIterator();
+			Iterator<Integer> i = adj[s].iterator();
 			while(i.hasNext()) {
 				int n = i.next();
 				if(visited[n] == false) {

@@ -41,6 +41,10 @@ public class longestPalindromeSubStr {
 				}
 			}
 		}
+		if(maxLength == 0) {
+            start = 0;
+            maxLength = 1;
+        }
 		System.out.println("Longest length is : " + maxLength);
 		System.out.println("Longest string is : " + str.substring(start, start+maxLength));
 	}

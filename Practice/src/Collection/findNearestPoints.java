@@ -2,26 +2,25 @@ package Collection;
 
 import java.util.*;
 
+/*
+ * Find m points from the input list which are close from the center.  
+ */
+
 public class findNearestPoints {
 	
-	Set<Point> m1 = new HashSet<>();
+	static Set<Point> m1 = new HashSet<>();
 	
 	public static void main (String[] args) {
 		findNearestPoints np = new findNearestPoints();
-		np.addPoint(new Point(0,1));
-		np.addPoint(new Point(0,2));
-		np.addPoint(new Point(0,3));
-		np.addPoint(new Point(0,4));
-		np.addPoint(new Point(0,5));	
+		m1.add(new Point(0,1));
+		m1.add(new Point(0,2));
+		m1.add(new Point(0,3));
+		m1.add(new Point(0,4));
+		m1.add(new Point(0,5));	
 		Point p = new Point(0, 0);
 		for(Point p1: np.findNearest(p, 3)) {
 			System.out.println("[" + p1.x + " , " + p1.y + "]");
-		}
-		
-	}
-	
-	public void addPoint(Point p) {
-		m1.add(p);
+		}	
 	}
 	
 	public Collection<Point> findNearest(Point c, int m) {

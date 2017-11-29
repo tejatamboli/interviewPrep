@@ -37,3 +37,22 @@ public class groupAnagramsTogether {
 		return res.toArray(arr);
 	}
 }
+
+
+/* Leetcode: https://leetcode.com/problems/group-anagrams/discuss/
+ * class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> m = new HashMap<>();
+        for(String s: strs) {
+            char[] arr = s.toCharArray();
+            Arrays.sort(arr);
+            String new_s = String.valueOf(arr);
+            if(!m.containsKey(new_s)) 
+                m.put(new_s, new ArrayList<>());
+            m.get(new_s).add(s);
+        }
+        return new ArrayList<List<String>>(m.values());
+       
+    }
+}
+*/
