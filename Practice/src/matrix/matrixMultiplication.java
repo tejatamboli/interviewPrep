@@ -1,4 +1,4 @@
-package Collection;
+package matrix;
 
 public class matrixMultiplication {
 	public static void main(String[] args) {

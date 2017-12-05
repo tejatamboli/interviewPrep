@@ -20,11 +20,8 @@ public class inorderTraversal {
 	                break;
 	            curr = s.pop();
 	            res.add(curr.data);
-	            curr = curr.right;
-	            
+	            curr = curr.right;	            
 	        }
 	        return res;      
 	    }
-	
-
 }

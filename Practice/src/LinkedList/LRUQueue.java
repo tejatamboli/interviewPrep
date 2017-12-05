@@ -13,5 +13,4 @@ public class LRUQueue {
 		this.count = 0;
 		this.numberOfFrames = numFrames;
 	}
-
 }

@@ -1,4 +1,4 @@
-package Collection;
+package backtrack;
 
 public class combination {
 	

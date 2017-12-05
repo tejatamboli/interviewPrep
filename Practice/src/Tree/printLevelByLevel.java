@@ -40,13 +40,14 @@ public class printLevelByLevel {
                 break;
             l.add(new LinkedList<Integer>());
             while(nodeCnt > 0) {
-                BinaryTree p = q.poll();
+                BinaryTree p = q.poll();//removes the head. different from remove as this does not throw exception for empty q
                 l.get(l.size()-1).add(p.data);
                 if(p.left != null)
                     q.add(p.left);
                 if(p.right != null)
                     q.add(p.right);
                 nodeCnt--;
+                
             }
         }
         return l;

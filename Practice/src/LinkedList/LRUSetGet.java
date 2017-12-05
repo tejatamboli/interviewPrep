@@ -27,14 +27,11 @@ public class LRUSetGet {
 	    if (prev != null) 
 	    		prev.next = next;
 	    else 
-	    		q.front = next;
-	    
-	    
+	    		q.front = next; 
 	    if (next != null) 
 	    		next.prev = prev;
 	    else 
 	    		q.rear = prev;
-	    
 	  }
 
 	  public static void Set(char key, int value) {
