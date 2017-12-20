@@ -2,6 +2,7 @@ package Collection;
 
 //one compolement is just make 0 to 1 and 1 to 0
 //two compolement is one complement + 1
+//Do it if input is integer
 
 public class oneComplement {
 	public static void main(String[] args) {

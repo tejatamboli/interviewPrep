@@ -81,7 +81,7 @@ public class mergeIntervals {
         int end = arr.get(0).end;
         
         for(Interval a: arr) {
-            if(a.start <= end) {
+            if(a.start <= end) { //overlap interval
                 end = Math.max(end, a.end);
             } else {
                 res.add(new Interval(start, end));

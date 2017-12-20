@@ -45,6 +45,8 @@ public class alienDictionary {
 	
 	public static void main(String[] args) {
 		String[] words = {"caa", "aaa", "aab"};
+		// n = size of the words array
+		//alphabet = max size of each word in the array
 		printOrder(words, 3, 3);
 	}
 

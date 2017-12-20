@@ -1,3 +1,4 @@
+
 package Collection;
 
 /* Leetcode
@@ -31,7 +32,8 @@ Given word1 = "makes", word2 = "coding", return 1.
 
 /* Leetcode
  * https://leetcode.com/problems/shortest-word-distance-ii/description/
-Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list.
+Design a class which receives a list of words in the constructor, and implements a method that takes two words 
+word1 and word2 and return the shortest distance between these two words in the list.
 
 For example,
 Assume that words = ["practice", "makes", "perfect", "coding", "makes"].

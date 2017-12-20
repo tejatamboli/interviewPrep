@@ -1,7 +1,7 @@
 package Collection;
 
 /* find celebrity where all people knows celebrity and celebrity person does not know anyone
-
+*/
 public class findInfluencer {
 	public static void main(String[] args) {
 		int[][] m1 = {{0,1,1,0},{1,0,1,1},{0,0,0,0},{1,1,1,0}};

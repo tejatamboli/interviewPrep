@@ -19,19 +19,19 @@ public class LRUSetGet {
 	   public static void removeNode(DLL node) {
 		   if (q.front == node) {
 			   q.front = q.front.next;
-	       return;
-	   }
+			   return;
+		   }
 	    
-	  	DLL prev = node.prev;
-	    DLL next = node.next;
-	    if (prev != null) 
-	    		prev.next = next;
-	    else 
-	    		q.front = next; 
-	    if (next != null) 
-	    		next.prev = prev;
-	    else 
-	    		q.rear = prev;
+		   DLL prev = node.prev;
+		   DLL next = node.next;
+		   if (prev != null) 
+	    			prev.next = next;
+		   else 
+	    			q.front = next; 
+		   if (next != null) 
+	    			next.prev = prev;
+		   else 
+	    			q.rear = prev;
 	  }
 
 	  public static void Set(char key, int value) {
@@ -79,7 +79,7 @@ public class LRUSetGet {
 	  		setTail(recent);
 	  		return recent.data;
 	    } else 
-	    		return -1;
+	    		return -1; // or call set with the parameters
 	    
 	  }
 	  

@@ -22,14 +22,14 @@ public class longestPalindromeSubStr {
 			table[i][i] = true;
 		
 		for(int i = 0; i < n-1; i++) {
-			if(str.charAt(i) == str.charAt(i+1)) {
+			if(str.charAt(i) == str.charAt(i+1)) { //gap = 2
 				maxLength = 2;
 				start = i;
 				table[i][i+1] = true;
 			}
 		}
 		
-		for(int k = 3; k <= n; k++) {
+		for(int k = 3; k <= n; k++) { //gap from 3 to n
 			for(int i = 0; i < n-k+1; i++) {
 				int j = i + k - 1;
 				if((table[i+1][j-1] == true) && (str.charAt(i) == str.charAt(j))) {

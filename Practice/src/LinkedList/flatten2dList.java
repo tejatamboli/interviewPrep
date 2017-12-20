@@ -1,4 +1,4 @@
-package Collection;
+package LinkedList;
 import java.util.*;
 
 /* Leetcode: https://leetcode.com/problems/flatten-2d-vector/description/

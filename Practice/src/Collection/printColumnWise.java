@@ -1,5 +1,14 @@
 package Collection;
 
+/* Display an integer array of [1, 2, 3, 4, 5, 6, 7] in the following format 
+1 4 6 
+2 5 7 
+3 
+The method signature takes in an array of integers and the number of columns. 
+In the above example, noOfCols = 3. The columns should contain equal number of elements 
+as much as possible.
+*/
+
 public class printColumnWise {
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5,6,7}; 

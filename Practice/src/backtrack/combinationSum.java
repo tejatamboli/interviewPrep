@@ -2,7 +2,7 @@ package backtrack;
 import java.util.*;
 
 /* Leetcode:  https://leetcode.com/problems/combination-sum/
- * Reuse same elemets
+ * Reuse same elements
 
 */
 public class combinationSum {

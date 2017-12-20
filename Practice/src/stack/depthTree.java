@@ -1,5 +1,33 @@
 package stack;
 
+/*Consider this string representation for binary trees. Each node is of the form (lr), 
+where l represents the left child and r represents the right child. If l is the character 0, then there 
+is no left child. Similarly, if r is the character 0, then there is no right child. Otherwise, the child 
+can be a node of the form (lr), and the representation continues recursively. 
+For example: (00) is a tree that consists of one node. ((00)0) is a two-node tree in which the root has a 
+left child, and the left child is a leaf. And ((00)(00)) is a three-node tree, with a root, a left and a 
+right child. 
+
+Write a function that takes as input such a string, and returns -1 if the string is malformed, and the 
+depth of the tree if the string is well-formed. 
+
+For instance: 
+find_depth('(00)') -> 0 
+find_depth('((00)0)') -> 1 
+find_depth('((00)(00))') -> 1 
+find_depth('((00)(0(00)))') -> 2 
+find_depth('((00)(0(0(00))))') -> 3 
+find_depth('x') -> -1 
+find_depth('0') -> -1 
+find_depth('()') -> -1 
+find_depth('(0)') -> -1 
+find_depth('(00)x') -> -1 
+find_depth('(0p)') -> -1
+
+debug depthTree.java() for getLength2()
+http://wxx5433.github.io/find-depth.html
+*/
+
 import java.util.*;
 
 public class depthTree {
@@ -23,68 +51,6 @@ public class depthTree {
 	    return depth;
 	}
 	
-	public static int getLength2(String str) {
-		int depth = -1;
-		
-	    char[] pattern = {'(', '0', '0', ')'};
-	    char[] strArr = str.toCharArray();
-	    boolean setErr = false;
-	    int j = 0;
-	    int len = strArr.length;
-	while(len != 1) {
-		if(len < 4)
-			return -1;
-		int i = 0;
-		int s = 0;
-	    char[] newStr = new char[len];
-	    int n_i = 0;
-	    
-	    while(i < len) {
-	    		s = i; j = 0;
-	    		System.out.println(i + " " + j + " " + s + String.valueOf(strArr) + String.valueOf(newStr) + setErr);
-	    		while(j < 4) {
-	    			if(strArr[s] == pattern[j]) {
-	    				s++; j++;
-	    			} else {
-	    				break;
-	    			}
-	    		}
-	    		System.out.println(":" + i + " " + j + " " + s + String.valueOf(strArr) + String.valueOf(newStr) + setErr);
-	    		if (j == 4) {
-	    			newStr[n_i++] = '0';
-	    			i = i + 4;
-	    		} else {
-	    			while(i < s) {
-	    				if(strArr[i] != '(' && strArr[i] != ')' && strArr[i] != '0') {
-	    					System.out.println(i + j + s + String.valueOf(strArr) + String.valueOf(newStr) + setErr);
-	    					setErr = true;
-	    					return -1;
-	    				}
-	    				newStr[n_i++] = strArr[i++];
-	    			}
-	    		}
-	    		if(i+4 > len) {
-	    			while(i < len) {
-	    				if(strArr[i] != '(' && strArr[i] != ')' && strArr[i] != '0') {
-	    					setErr = true;
-	    					return -1;
-	    				}
-	    				
-	    				newStr[n_i++] = strArr[i++];
-	    			}
-	    		}
-	    }
-	    strArr = newStr.clone();
-	    len = n_i;
-	    if(setErr)
-	    		return -1;
-	    
-	    System.out.println("opt1: " + String.valueOf(strArr));
-	    depth++;
-	}
-	return (depth);
-	}
-
 	public static int getLength3(String str) {
 		if (str == null)
 			return -1;

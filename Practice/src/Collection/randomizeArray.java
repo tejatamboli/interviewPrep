@@ -46,3 +46,45 @@ public class randomizeArray {
 		r.print();		
 	}
 }
+
+/* Leetcode: https://leetcode.com/problems/shuffle-an-array/description/
+ * Shuffle a set of numbers without duplicates.
+ * 
+ * class Solution {
+    private int[] nums;
+    Random random;
+
+    public Solution(int[] nums) {
+        this.nums = nums;
+        this.random = new Random();
+        
+    }
+    
+    // Resets the array to its original configuration and return it. 
+    public int[] reset() {
+        return this.nums;
+        
+    }
+    
+    // Returns a random shuffling of the array. 
+    public int[] shuffle() {
+        int[] a = nums.clone();
+        for(int i = 0; i < nums.length; i++) {
+            int j = random.nextInt(i+1);
+            int t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+        }
+        return a;
+    }
+}
+
+def fisher_yates_shuffle(items):
+    for i in range(len(items)):
+        randomIndex = random.randint(i, len(items)-1)
+        temp = items[randomIndex]
+        items[randomIndex] = items[i]
+        items[i] = temp
+    return items
+
+*/

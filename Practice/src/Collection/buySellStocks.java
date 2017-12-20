@@ -3,7 +3,8 @@ package Collection;
 /* Leetcode: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/
  * Say you have an array for which the ith element is the price of a given stock on day i.
 
-If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an
+ algorithm to find the maximum profit.
 
 Example 1:
 Input: [7, 1, 5, 3, 6, 4]
@@ -27,7 +28,9 @@ public class buySellStocks {
 /* Leetcode: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/
  * Say you have an array for which the ith element is the price of a given stock on day i.
 
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+Design an algorithm to find the maximum profit. You may complete as many transactions as you like 
+(ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions 
+at the same time (ie, you must sell the stock before you buy again).
 
 
  */
@@ -49,6 +52,9 @@ class Solution {
 Given an integer n, return the number of trailing zeroes in n!.
 
 Note: Your solution should be in logarithmic time complexity.
+Because all trailing 0 is from factors 5 * 2.
+But sometimes one number may have several 5 factors, for example, 25 have two 5 factors, 125 have 
+three 5 factors. In the n! operation, factors 2 is always ample. So we just count how many 5 factors in all number from 1 to n.
 */
 class Solution1 {
     public int trailingZeroes(int n) {

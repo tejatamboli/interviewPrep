@@ -4,6 +4,7 @@ import java.util.*;
 
 //sum is the addition of consecutive odd numbers
 //check if the number is perfect square
+//16 = 1 + 3 + 5 + 7 
 
 public class perfectSquare {
 	

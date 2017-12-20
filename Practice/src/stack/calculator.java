@@ -1,4 +1,4 @@
-package Collection;
+package stack;
 
 /*
  * Leetcode: https://leetcode.com/problems/basic-calculator-ii/description/
@@ -33,9 +33,8 @@ public class calculator {
 	            if(i < s.length() && s.charAt(i) == ' ')
 	                i++;
 	            else if( i == s.length() || !Character.isDigit(s.charAt(i))) {
-	                if(sign == '+') {
+	                if(sign == '+') 
 	                    st.push(num);
-	                }
 	                else if(sign == '-')
 	                    st.push(-num);
 	                else if(sign == '*')

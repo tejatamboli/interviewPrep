@@ -72,3 +72,38 @@ public class unionIntersection {
 		return op;
 	}	
 }
+
+/* Leetcode: https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
+ * Given two arrays, write a function to compute their intersection.
+
+Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+
+Note:
+Each element in the result should appear as many times as it shows in both arrays.
+The result can be in any order.
+ */
+/*
+class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < nums1.length; i++) {
+            int val = 0;
+            if(map.containsKey(nums1[i]))
+                val = map.get(nums1[i]);
+            map.put(nums1[i], val+1);
+        }
+        List<Integer> res = new LinkedList<>();
+        for(int j = 0; j < nums2.length; j++) {
+            if(map.containsKey(nums2[j]) && map.get(nums2[j]) > 0) {
+                res.add(nums2[j]);
+                map.put(nums2[j], map.get(nums2[j])-1);
+            }
+        }
+        int[] r = new int[res.size()];
+        for(int i = 0; i < res.size(); i++)
+            r[i] = res.get(i);
+        return r;
+    }
+}
+*/

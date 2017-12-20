@@ -2,6 +2,8 @@ package dp;
 
 import java.util.*;
 
+//With the given mapping in hashmap, find the number of ways to decode the number num
+
 public class mapNumbersAlphasbets {
 	
 	public static void main(String[] args) {
@@ -25,9 +27,10 @@ public class mapNumbersAlphasbets {
 		for(int i = 2; i <= n; i++) {
 			table[i] = 0;
 			System.out.println("Considering: " + numArr[i-2] + numArr[i-1]);
-			if(m1.get((int)(numArr[i-1] - '0')) != null)
+			int s = Integer.valueOf(num.substring(i-1, i));
+			if(m1.get(s) != null)
 				table[i] = table[i-1];
-			int s = (((int)numArr[i-2]-'0') * 10) + ((int)numArr[i-1] - '0');
+			s = Integer.valueOf(num.substring(i-2, i));
 			if (m1.get(s) != null)
 				table[i] += table[i-2];
 			System.out.println("i: " + i + " table: " + table[i]);

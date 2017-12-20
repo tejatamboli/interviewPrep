@@ -8,10 +8,11 @@ You may assume that all inputs are consist of lowercase letters a-z.
  */
 
 class TrieNode {
-    TrieNode[] children = new TrieNode[26];
+    TrieNode[] children;
     boolean isEnd; 
     public TrieNode() {
         isEnd = false;
+        children = new TrieNode[26];
         for(int i = 0; i < 26; i++) {
             children[i] = null;
         }

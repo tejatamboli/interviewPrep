@@ -1,5 +1,7 @@
 package Collection;
 
+//Display 5 in multipe ways i.e sum of digits e.g 11111, 12111
+
 public class printComposition {
 	public static void main(String[] args) {
 		int n = 5;
