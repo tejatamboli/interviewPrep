@@ -13,6 +13,7 @@ class MyNode {
 	MyNode left;
 	MyNode right;
 	int max;
+	
 	public MyNode(int d) {
 		this.data = d;
 		this.max = 0;
