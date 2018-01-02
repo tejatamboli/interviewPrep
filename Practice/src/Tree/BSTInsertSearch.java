@@ -50,7 +50,8 @@ public class BSTInsertSearch {
 			return root;
 		else if(root.data < key)
 			return searchRec(root.right, key);
-		return searchRec(root.left, key);
+		else
+			return searchRec(root.left, key);
 	}
 	
 	public static BinaryTree search(BinaryTree root, int key) {

@@ -4,9 +4,10 @@ import java.util.*;
 
 public class BSTIterator {
     
-    Stack<BinaryTree> st = new Stack<>();
+    Stack<BinaryTree> st;
 
     public BSTIterator(BinaryTree root) {
+    		st = new Stack<>(); 
         pushAllLeft(root);   
     }
 
