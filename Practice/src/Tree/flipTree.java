@@ -13,8 +13,7 @@ public class flipTree {
 		root.left.left.right= new BinaryTree(7);
 		
 		BinaryTree newRoot = flipAllNodesIter(root);
-		printLevelByLevel pl = new printLevelByLevel();
-		pl.printLevel(newRoot);
+		printLevelByLevel.printLevel(newRoot);
 	}
 	
 	public static BinaryTree flipAllNodes(BinaryTree root) {

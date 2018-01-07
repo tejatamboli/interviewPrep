@@ -1,7 +1,5 @@
 package backtrack;
 
-import java.util.*;
-
 public class printFactors {
 	public static void main(String[] args) {
 		int num = 60;

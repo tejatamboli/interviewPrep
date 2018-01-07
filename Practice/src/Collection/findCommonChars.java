@@ -37,9 +37,9 @@ public class findCommonChars {
 				}
 			}	
 		}
-		Iterator it = m1.entrySet().iterator();
+		Iterator<Map.Entry<Character, Map<Integer, Integer>>> it = m1.entrySet().iterator();
 		while(it.hasNext()) {
-			Map.Entry<Integer, Map<Integer, Integer>>pair = (Map.Entry)it.next();
+			Map.Entry<Character, Map<Integer, Integer>>pair = it.next();
 			if (pair.getValue().size() == l1.size()) {
 				System.out.print(pair.getKey());
 				int cnt = Integer.MAX_VALUE;
@@ -70,6 +70,37 @@ public class findCommonChars {
 		for(int j = 0; j < 26; j++) {
 			if (chars[j] == l1.size())
 				System.out.println((char)(j+'a'));
+		}
+	}
+	
+	
+	//another implementation
+	public int getNumOfCommonChars(String[] inputs) {
+		// Return 0 if null / empty input or only one string is provided
+		if(inputs == null || inputs.length < 2) {
+			return 0;
+		} else {
+			//create an int array to hold # times character appears 
+			int[] charCounts = new int[256];
+			for(String input : inputs) {
+				Set<Character> uniqueCharSet = new HashSet<Character>();
+				for(int i=0; i < input.length(); i++) {
+					char ch = input.charAt(i);
+					if (!uniqueCharSet.contains(ch)) {
+						uniqueCharSet.add(ch);
+						charCounts[(int) ch] += 1;
+					}
+				}	
+			}
+		
+			int commonCharCount = 0;
+			for (int i=0; i < 256; i++) {
+				if (charCounts[i] == inputs.length) {
+					commonCharCount++;
+				}
+			}
+			
+			return commonCharCount;
 		}
 	}
 }

@@ -18,8 +18,7 @@ public class buildTreeParentChild {
 		l1.add(new Relation(20, 50, true));
 		
 		BinaryTree root = buildTree(l1);
-		printLevelByLevel pl = new printLevelByLevel();
-		pl.printLevel(root);
+		printLevelByLevel.printLevel(root);
 	}
 	
 	public static BinaryTree buildTree(List<Relation> l1) {

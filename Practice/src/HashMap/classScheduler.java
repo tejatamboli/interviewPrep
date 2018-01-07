@@ -24,7 +24,7 @@ public class classScheduler {
 	        for(int i = 0; i < tasks.length; i++) {
 	            map.put(tasks[i], map.getOrDefault(tasks[i], 0) + 1);
 	        }
-	        PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+	        PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue()); //maxq
 	        q.addAll(map.entrySet());
 	        
 	        int count = 0;

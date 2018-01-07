@@ -4,7 +4,7 @@ public class strategicGame {
 	public static void main(String[] args) {
 		int[] a1 = {8,15,3,7};
 		int n = a1.length;
-		int[] a2 = {5,3,7,10};
+		//int[] a2 = {5,3,7,10};
 		System.out.println("Max ans: " + getVal(a1,n));
 	}
 	

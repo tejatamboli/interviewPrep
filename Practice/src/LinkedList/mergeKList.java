@@ -64,5 +64,39 @@ public class mergeKList {
         }
         return result;       
     }
-
 }
+
+
+/* For input n streams of infinite numbers
+ * class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if(lists == null || lists.length == 0)
+            return null;
+        PriorityQueue<ListNode> minpq = new PriorityQueue<ListNode>(lists.length, new Comparator<ListNode>(){
+            @Override
+            public int compare(ListNode o1, ListNode o2) {
+                return o1.val-o2.val;
+            }
+        });
+        
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+        
+        for(ListNode l: lists) {
+            if(l != null)
+                minpq.offer(l);
+        }
+        
+        while(!minpq.isEmpty()) {
+            ListNode del = minpq.poll();
+            if(del.next != null)
+                minpq.offer(del.next);
+            del.next = null;
+            tail.next = del;
+            tail = tail.next;
+        }
+        return dummy.next;
+    }
+}
+*/
+

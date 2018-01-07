@@ -10,7 +10,7 @@ s = "rat", t = "car", return false.
 
 public class isAnagram {
 	
-	    public boolean isAnagram(String s, String t) {
+	    public boolean isAnagramI(String s, String t) {
 	        int[] map = new int[26];
 	        if(s.length() != t.length())
 	            return false;

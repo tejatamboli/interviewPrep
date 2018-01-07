@@ -1,6 +1,5 @@
 package Collection;
 
-import java.util.*;
 
 //sum is the addition of consecutive odd numbers
 //check if the number is perfect square

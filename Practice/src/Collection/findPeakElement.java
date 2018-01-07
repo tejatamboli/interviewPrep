@@ -10,7 +10,7 @@ index number 2.
  */
 
 public class findPeakElement {
-	public int findPeakElement(int[] nums) {
+	public int findPeakElementI(int[] nums) {
         for(int i = 1; i < nums.length; i++) {
             if(nums[i] < nums[i-1])
                 return i-1;

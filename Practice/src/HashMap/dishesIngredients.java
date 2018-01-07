@@ -32,9 +32,9 @@ public class dishesIngredients {
 			}
 		}
 		
-		Iterator it = ingList.entrySet().iterator();
+		Iterator<Map.Entry<String, Set<String>>> it = ingList.entrySet().iterator();
 		while(it.hasNext()) {	
-				Map.Entry<String, Set<String>>pair = (Map.Entry)it.next();
+				Map.Entry<String, Set<String>>pair = it.next();
 				if (pair.getValue().size() > 1) {
 					System.out.println(pair.getKey() + " : " + pair.getValue());	
 				}

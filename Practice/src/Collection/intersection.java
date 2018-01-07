@@ -10,13 +10,13 @@ public class intersection {
 		
 		int[]a = {1,1,5,6,7,8,9};
 		int[]b = {1,1,5,5,17,81,88,99};
-		List<Integer> l1 = intersection(a, b);
+		List<Integer> l1 = intersectionI(a, b);
 		for(Integer c: l1) {
 			System.out.print(" " + c);
 		}
 	}
 	
-	public static List<Integer> intersection(int[]c, int[]d) {
+	public static List<Integer> intersectionI(int[]c, int[]d) {
 		List<Integer> intersection = new ArrayList<>();
 		int i = 0; int j = 0;
 		

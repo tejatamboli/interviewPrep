@@ -25,10 +25,7 @@ public class removeNthNode {
 	            cur = cur.next;
 	            temp = temp.next;
 	        }
-	        Node t = cur.next;
 	        cur.next = cur.next.next;
-	        t = null;
-	        
 	        return start.next;      
 	    }
 	

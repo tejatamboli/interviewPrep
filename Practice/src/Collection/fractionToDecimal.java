@@ -11,7 +11,7 @@ Given numerator = 2, denominator = 3, return "0.(6)".
  */
 
 public class fractionToDecimal {
-	public String fractionToDecimal(int numerator, int denominator) {
+	public String fractionToDecimalI(int numerator, int denominator) {
         if (denominator == 0 || numerator == 0)
             return "0";
         Boolean neg = false;

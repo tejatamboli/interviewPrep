@@ -19,7 +19,7 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 */
 
 public class decodeString {
-	    public String decodeString(String s) {
+	    public String decodeStringI(String s) {
 	        String res = "";
 	        Stack<Integer>numSt = new Stack<Integer>();
 	        Stack<String>repeatSt = new Stack<String>();

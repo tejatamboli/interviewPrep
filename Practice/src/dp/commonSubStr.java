@@ -19,6 +19,9 @@ public class commonSubStr {
 		
 		List<String> l1 = getCommonSubStr(user1, user3);
 	    System.out.println(l1);
+	    List<String> l2 = getCommonSubStr(user0, user2);
+	    System.out.println(l2);
+	    
 	}
 	
 	public static List<String> getCommonSubStr(List<String>u1, List<String>u2) {

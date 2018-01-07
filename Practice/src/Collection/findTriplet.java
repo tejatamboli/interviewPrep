@@ -1,6 +1,6 @@
 package Collection;
 
-import java.util.Arrays;
+
 
 /*
  * find triplet with following condition

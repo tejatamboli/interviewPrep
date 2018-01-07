@@ -1,5 +1,4 @@
 package LinkedList;
-import java.util.*;
 
 /* Leetcode: https://leetcode.com/problems/palindrome-linked-list/discuss/
  * Given a singly linked list, determine if it is a palindrome.

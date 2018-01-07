@@ -1,7 +1,5 @@
 package Collection;
 
-import java.util.*;
-
 public class rangeCommonNumbers {
 	public static void main(String[] args) {
 		//int arr[] = {0, 2, 3, 3, 3, 10, 10};

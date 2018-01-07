@@ -5,12 +5,12 @@ package Collection;
 public class findInfluencer {
 	public static void main(String[] args) {
 		int[][] m1 = {{0,1,1,0},{1,0,1,1},{0,0,0,0},{1,1,1,0}};
-		System.out.println("influencer: " + findInfluencer(m1));
+		System.out.println("influencer: " + findInfluencerI(m1));
 		System.out.println("influencer: " + getInfluencer(m1));
 	}
 	
 	//o(n^2)
-	public static int findInfluencer(int[][]m1) {
+	public static int findInfluencerI(int[][]m1) {
 		int[] following = new int[m1.length];
 		int[] followers = new int[m1.length];
 		for(int i = 0; i < m1.length; i++) {

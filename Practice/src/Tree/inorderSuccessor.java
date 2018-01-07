@@ -6,7 +6,7 @@ package Tree;
 
 public class inorderSuccessor {
 	
-	    public BinaryTree inorderSuccessor(BinaryTree root, BinaryTree p) {
+	    public BinaryTree inorderSuccessorI(BinaryTree root, BinaryTree p) {
 	        if(p.right != null) {
 	            return minValue(p.right);
 	        }

@@ -20,16 +20,16 @@ public class topKElements {
 	            map.put(n, val);
 	        }
 	        PriorityQueue<Map.Entry<Integer, Integer>> minpq = new PriorityQueue<>((a,b) -> a.getValue()-b.getValue());
-	        Iterator it = map.entrySet().iterator();
+	        Iterator<Map.Entry<Integer, Integer>> it = map.entrySet().iterator();
 	        while(it.hasNext()) {
-	            Map.Entry<Integer, Integer> entry = (Map.Entry)it.next();
+	            Map.Entry<Integer, Integer> entry = it.next();
 	            minpq.offer(entry);
 	            if(minpq.size() > k)
 	                minpq.poll();
 	        }
 	        List<Integer> res = new LinkedList<>();
 	        while(!minpq.isEmpty()) {
-	            res.add(0, minpq.poll().getKey());
+	            res.add(0, minpq.poll().getKey()); //makes reverse linkedlist
 	        }
 	        return res;       
 	    }

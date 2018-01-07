@@ -8,10 +8,10 @@ public class isBST {
 		root.left.left  = new BinaryTree(1);
 		root.left.right = new BinaryTree(3);
 		
-		System.out.println("isBST: " + isBST(root));
+		System.out.println("isBST: " + isBSTI(root));
 	}
 	
-	public static boolean isBST(BinaryTree root) {
+	public static boolean isBSTI(BinaryTree root) {
 		return isBSTUtil(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
 	}
 	

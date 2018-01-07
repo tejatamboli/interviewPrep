@@ -4,7 +4,7 @@ import java.util.*;
 public class demo {
 	
 	public static void main(String[] args) {
-	List a1 = new ArrayList();
+	List<String> a1 = new ArrayList<>();
     a1.add("test");
     a1.add("Mahnaz");
     a1.add("Ayan");
@@ -12,7 +12,7 @@ public class demo {
     System.out.print("\t" + a1);
 
     // LinkedList
-    List l1 = new LinkedList();
+    List<String> l1 = new LinkedList<>();
     l1.add("Zara");
     l1.add("Mahnaz");
     l1.add("Ayan");
@@ -21,7 +21,7 @@ public class demo {
     System.out.print("\t" + l1);
 
     // HashSet
-    Set s1 = new HashSet(); 
+    Set<String> s1 = new HashSet<>(); 
     s1.add("Zara");
     s1.add("Mahnaz");
     s1.add("Ayan");

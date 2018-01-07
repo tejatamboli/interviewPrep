@@ -9,9 +9,9 @@ public class BFS {
 	
 	public BFS(int v) {
 		V = v;
-		adj = new LinkedList[v];
+		adj = new LinkedList[V];
 		for(int i = 0; i < v; i++)
-			adj[i] = new LinkedList();
+			adj[i] = new LinkedList<Integer>();
 	}
 	
 	public void addEdge(int v, int w) {

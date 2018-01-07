@@ -7,10 +7,10 @@ public class isNumber {
 	public static void main(String[] args) {
 		//String num = "-3.0123";
 		String num = ".";
-		System.out.println("num: " + num + " is number: " + isNumber(num));
+		System.out.println("num: " + num + " is number: " + isNumberI(num));
 	}
 	
-	public static boolean isNumber(String num) {
+	public static boolean isNumberI(String num) {
 		num = num.trim();
 		boolean signed = false;
 		boolean started = false;

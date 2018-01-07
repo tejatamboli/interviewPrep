@@ -1,6 +1,5 @@
 package Collection;
 
-import java.util.*;
 
 public class nestedList_reverse_depth_weighted_sum {
 	/*public static void main(String[] args) {

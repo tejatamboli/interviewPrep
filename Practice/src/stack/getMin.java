@@ -3,6 +3,10 @@ package stack;
 import java.util.Stack;
 
 public class getMin extends Stack<Integer> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L; //added to resolve warning
 	Stack<Integer>min = new Stack<>();
 	
 	void push(int x) {

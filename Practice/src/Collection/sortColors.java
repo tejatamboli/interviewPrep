@@ -8,7 +8,7 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
  * 
  */
 public class sortColors {
-	public void sortColors(int[] nums) {
+	public void sortColorsI(int[] nums) {
         int p1 = 0, p2 = nums.length-1;
         int i = 0;
         while(i <= p2) {

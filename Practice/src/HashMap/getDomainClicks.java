@@ -51,6 +51,7 @@ public class getDomainClicks {
 	        "1,com" };
 	    
 	    Map<String, Integer> map = getDomainsClicks1(counts);
+	    System.out.println(map.toString());
 	}
 	
 	public static Map<String, Integer> getDomainsClicks1(String[] counts) {

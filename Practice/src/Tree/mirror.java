@@ -9,10 +9,9 @@ public class mirror {
 		root.left.right = new BinaryTree(5);
 		root.left.left.left = new BinaryTree(6);
 		root.left.left.right= new BinaryTree(7);
-		printLevelByLevel pl = new printLevelByLevel();
-		pl.printLevel(root);
+		printLevelByLevel.printLevel(root);
 		BinaryTree newRoot = mirrorTree(root);
-		pl.printLevel(newRoot);
+		printLevelByLevel.printLevel(newRoot);
 	}
 	
 	public static BinaryTree mirrorTree(BinaryTree root) {

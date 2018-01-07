@@ -1,6 +1,5 @@
 package HashMap;
 
-import java.util.Arrays;
 
 /* Design data structure to implement T9 dictionary -> Trie */
 /*It is based on phone the way you press numbers it should print all possible words*/
