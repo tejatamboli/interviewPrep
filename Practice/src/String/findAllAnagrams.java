@@ -46,7 +46,8 @@ public class findAllAnagrams {
 	    //best solution
 	        public List<Integer> findAnagramsI(String s, String p) {
 	            List<Integer> list = new ArrayList<>();
-	        if (s == null || s.length() == 0 || p == null || p.length() == 0) return list;
+	        if (s == null || s.length() == 0 || p == null || p.length() == 0) 
+	        		return list;
 	        
 	        int[] hash = new int[256]; //character hash
 	        

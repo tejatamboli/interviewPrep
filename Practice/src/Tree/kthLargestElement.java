@@ -2,6 +2,7 @@ package Tree;
 
 public class kthLargestElement {
 	static int c = 0;
+	static int num = 0;
 	public static void main(String[] args) {
 		BinaryTree root = new BinaryTree(50);
 		root.left = new BinaryTree(30);
@@ -12,8 +13,9 @@ public class kthLargestElement {
 		root.right.right = new BinaryTree(80);	
 	
 		for(int i = 1; i < 8; i++) {
-			c = 0;
+			c = 0; 
 			findKthLargest(root,i);
+			System.out.println("k: " + i + " " + num);
 		}
 	}
 	
@@ -24,7 +26,7 @@ public class kthLargestElement {
 		findKthLargest(root.right, k);
 		c++;
 		if(k == c) {
-			System.out.println("k: " + k + " " + root.data);
+			num = root.data;
 			return;
 		}
 		findKthLargest(root.left, k);

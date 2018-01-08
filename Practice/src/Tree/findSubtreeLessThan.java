@@ -30,17 +30,13 @@ public class findSubtreeLessThan {
 		getTheNode(root.right);
 		if(root.left == null && root.right == null) {
 			root.max = root.data;
-			//return;
 		} else if(root.left != null && root.right != null) {
 			int max = Math.max(root.left.max, root.right.max);
 			root.max = Math.max(root.data, max);
-			//return;
 		} else if(root.left == null && root.right != null) {
 			root.max = Math.max(root.data, root.right.max);
-			//return;
 		} else if(root.left != null && root.right == null) {
 			root.max = Math.max(root.data, root.left.max);
-			//return;
 		}	
 		System.out.println("root: " + root.data + " max: " + root.max);
 	}

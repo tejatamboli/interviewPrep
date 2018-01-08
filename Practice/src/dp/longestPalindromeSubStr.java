@@ -1,7 +1,7 @@
 package dp;
 
 /*
- * For a given array find the maximum size palindrome subset. The subset may be not continues.
+ * For a given array find the maximum size palindrome subsequence. The subset may be not continues.
  * For input 1, 2, 4, 5, 1 the answer is 3, the subset is 1,2,1
  */
 public class longestPalindromeSubStr {

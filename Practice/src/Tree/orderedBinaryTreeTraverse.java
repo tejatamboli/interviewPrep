@@ -34,11 +34,9 @@ public class orderedBinaryTreeTraverse {
 	}
 	
 	public static void printQueue() {
-		Iterator<Integer> it = q.iterator();
-        while (it.hasNext()) {
-        	    int d = q.poll();
-            System.out.println(" " + d);
-            
+        while(!q.isEmpty()) {
+        	 System.out.println(" " + q.poll());
         }
+        
 	}
 }

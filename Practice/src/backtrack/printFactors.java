@@ -1,5 +1,4 @@
 package backtrack;
-
 public class printFactors {
 	public static void main(String[] args) {
 		int num = 60;

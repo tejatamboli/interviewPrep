@@ -28,7 +28,8 @@ Hence, from there, you can now the profit at a state at time i as:
 s0[i] = max(s0[i - 1], s2[i - 1]); // Stay at s0, or rest from s2
 s1[i] = max(s1[i - 1], s0[i - 1] - prices[i]); // Stay at s1, or buy from s0
 s2[i] = s1[i - 1] + prices[i]; // Only one way from s1
-Then, you just find the maximum of s0[n] and s2[n], since they will be the maximum profit we need (No one can buy stock and left with more profit that sell right :) )
+Then, you just find the maximum of s0[n] and s2[n], since they will be the maximum profit we need 
+(No one can buy stock and left with more profit that sell right :) )
 
 Define base case:
 

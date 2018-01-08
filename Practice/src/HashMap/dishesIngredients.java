@@ -32,6 +32,8 @@ public class dishesIngredients {
 			}
 		}
 		
+		System.out.println(ingList.toString());
+		
 		Iterator<Map.Entry<String, Set<String>>> it = ingList.entrySet().iterator();
 		while(it.hasNext()) {	
 				Map.Entry<String, Set<String>>pair = it.next();

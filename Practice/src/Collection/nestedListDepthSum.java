@@ -18,7 +18,7 @@ public class nestedListDepthSum {
 	        Queue<NestedInteger> q = new LinkedList<>();
 	        for(NestedInteger ni: nestedList) 
 	            q.add(ni);
-	        int level = 1;
+	        
 	        int total = 0;
 	        int prev = 0;
 	        
@@ -28,7 +28,7 @@ public class nestedListDepthSum {
 	            for(int j = 0; j < size; j++) {
 	                NestedInteger i = q.poll();
 	                if(i.isInteger()) {
-	                    levelSum += level * i.getInteger();
+	                    levelSum +=  i.getInteger();
 	                } else {
 	                    for(NestedInteger ni: i.getList())
 	                        q.add(ni);
@@ -36,7 +36,7 @@ public class nestedListDepthSum {
 	            }
 	            prev += levelSum;
 	            total += prev;
-	            level++;
+	         
 	        }
 	        return total;
 	    }

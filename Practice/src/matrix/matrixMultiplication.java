@@ -42,4 +42,26 @@ public class matrixMultiplication {
 1 2 3     10 11 12      res[0][0] += 1*10 + 2*13 + 3*16
 4 5 6     13 14 15      res[0][1] += 1*11 + 2*14 + 3*17
 7 8 9     16 17 18      res[0][2] += 1*12 + 2*15 + 3*18
+
+
+void multiply(int m1, int m2, int mat1[][m2],
+              int n1, int n2, int mat2[][n2])
+{
+    int x, i, j;
+    int res[m1][n2];
+    for (i = 0; i < m1; i++) {
+        for (j = 0; j < n2; j++) {
+            res[i][j] = 0;
+            for (k = 0; k < n1; k++) {
+                res[i][j] += mat1[i][k] * mat2[k][j];
+            }
+        }
+    }
+    for (i = 0; i < m1; i++) {
+        for (j = 0; j < n2; j++) {
+            printf("%d ", *(*(res + i) + j));
+        }
+        printf("\n");
+    }
+}
 */

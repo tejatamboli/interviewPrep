@@ -35,7 +35,6 @@ public class calculatorPara {
 	            result += sign * num;
 	            sign = stack.peek() * (c == '+' ? 1: -1); 
 	            num = 0;
-	                    
 	        } else if(c == '(') {
 	            stack.push(sign);
 	                    

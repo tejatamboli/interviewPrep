@@ -32,7 +32,7 @@ public class calculator {
 	            }
 	            if(i < s.length() && s.charAt(i) == ' ')
 	                i++;
-	            else if( i == s.length() || !Character.isDigit(s.charAt(i))) {
+	            else if( i == s.length()-1 || !Character.isDigit(s.charAt(i))) {
 	                if(sign == '+') 
 	                    st.push(num);
 	                else if(sign == '-')

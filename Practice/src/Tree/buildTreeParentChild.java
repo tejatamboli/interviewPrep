@@ -3,7 +3,7 @@ package Tree;
 import java.util.*;
 
 /* Build tree from the list which has parent, child and isleft value 
- * 
+ * LinkedIn careercup
  */
 
 public class buildTreeParentChild {

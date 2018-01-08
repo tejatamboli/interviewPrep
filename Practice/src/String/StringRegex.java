@@ -29,8 +29,22 @@ public class StringRegex {
 	    return j == p.length();
     }
 	
+	/*public static boolean isMatchRec(String s, String p, int i, int j) {
+		//if(i >= s.length() || j >= p.length())
+		//	return true;
+		if(i == s.length()-1 && j == p.length()-1)
+			return true;
+		if(p.charAt(j) == '*' && j+1 < p.length() && i == s.length())
+			return false;
+		if(p.charAt(j) == '?' || s.charAt(i) == p.charAt(j))
+			return isMatchRec(s, p, i+1, j+1);
+		if(p.charAt(j) == '*')
+			return isMatchRec(s, p, i, j+1) || isMatchRec(s, p, i+1, j); 
+		return false;
+	}*/
+	
 	public static void main(String[] args) {
-		String s1 = "aabcd"; 
+		String s1 = "aabcde"; 
 		String s2 = "*b*d";
 		System.out.println(s1 + " " + s2 + " are matching?: " + isMatch(s1, s2));
 	}
